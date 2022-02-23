@@ -1,9 +1,4 @@
-import {
-    Box,
-    CloseButton, Drawer,
-    DrawerContent, Flex,
-    Icon, IconButton, Link, Text, useColorModeValue, useDisclosure
-} from '@chakra-ui/react';
+import { Avatar, Box, CloseButton, Drawer, DrawerContent, Flex, Icon, IconButton, Link, Text, useColorModeValue, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import {
     FiCompass, FiHome, FiMenu, FiSettings, FiStar, FiTrendingUp
@@ -48,6 +43,7 @@ export default function SimpleSidebar({ children }) {
 }
 
 
+
 const SidebarContent = ({ onClose, ...rest }) => {
     return (
         <Box
@@ -59,16 +55,17 @@ const SidebarContent = ({ onClose, ...rest }) => {
             h="full"
             {...rest}>
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-                <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-                    Logo
-                </Text>
+                <Avatar showBorder="true" borderColor='papayawhip' boxShadow={'dark-lg'} marginTop={'50'} size='xl' name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />{' '}
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
-            {LinkItems.map((link) => (
-                <NavItem key={link.name} icon={link.icon}>
-                    {link.name}
-                </NavItem>
-            ))}
+            <Box marginTop={'10'}>
+                {LinkItems.map((link) => (
+                    <NavItem key={link.name} icon={link.icon}>
+                        {link.name}
+                    </NavItem>
+
+                ))}
+            </Box>
         </Box>
     );
 };
@@ -84,6 +81,7 @@ const NavItem = ({ icon, children, ...rest }) => {
                 borderRadius="lg"
                 role="group"
                 cursor="pointer"
+                h="full"
                 _hover={{
                     bg: 'cyan.400',
                     color: 'white',
@@ -104,6 +102,7 @@ const NavItem = ({ icon, children, ...rest }) => {
         </Link>
     );
 };
+
 
 const MobileNav = ({ onOpen, ...rest }) => {
     return (
