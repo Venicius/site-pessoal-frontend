@@ -14,6 +14,10 @@ export default {
             500: '#FCBF49',
 
         },
+        background: {
+            900: '#f7f9fc',
+            200: '#e6eaf0',
+        }
     },
     sizes: {
         ...theme.space,

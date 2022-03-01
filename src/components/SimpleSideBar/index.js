@@ -1,4 +1,4 @@
-import { Avatar, Box, CloseButton, Drawer, DrawerContent, Flex, Icon, IconButton, Link, Text, useColorModeValue, useDisclosure } from '@chakra-ui/react';
+import { Avatar, Box, CloseButton, Drawer, DrawerContent, Flex, Icon, IconButton, Link, Text, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import {
     FiCompass, FiHome, FiMenu, FiSettings, FiStar, FiTrendingUp
@@ -16,7 +16,7 @@ const LinkItems = [
 export default function SimpleSidebar({ children }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
-        <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
+        <Box minH="100vh" >
             <SidebarContent
                 onClose={() => onClose}
                 display={{ base: 'none', md: 'block' }}
@@ -47,9 +47,9 @@ export default function SimpleSidebar({ children }) {
 const SidebarContent = ({ onClose, ...rest }) => {
     return (
         <Box
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={'background.900'}
             borderRight="1px"
-            borderRightColor={useColorModeValue('gray.200', 'gray.700')}
+            borderRightColor={'background.200'}
             w={{ base: 'full', md: 60 }}
             pos="fixed"
             h="full"
@@ -66,7 +66,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
                 ))}
             </Box>
-        </Box>
+        </Box >
     );
 };
 
@@ -83,7 +83,7 @@ const NavItem = ({ icon, children, ...rest }) => {
                 cursor="pointer"
                 h="full"
                 _hover={{
-                    bg: 'cyan.400',
+                    bg: 'primary.500',
                     color: 'white',
                 }}
                 {...rest}>
@@ -111,9 +111,9 @@ const MobileNav = ({ onOpen, ...rest }) => {
             px={{ base: 4, md: 24 }}
             height="20"
             alignItems="center"
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={'background.900'}
             borderBottomWidth="1px"
-            borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+            borderBottomColor={'Background.200'}
             justifyContent="flex-start"
             {...rest}>
             <IconButton
@@ -124,7 +124,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
             />
 
             <Text fontSize="2xl" ml="8" fontFamily="monospace" fontWeight="bold">
-                Logo
+                Venicius Alves
             </Text>
         </Flex>
     );
