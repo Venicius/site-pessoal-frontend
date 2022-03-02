@@ -47,7 +47,7 @@ export default function SimpleSidebar({ children }) {
 const SidebarContent = ({ onClose, ...rest }) => {
     return (
         <Box
-            bg={'background.900'}
+            bg={'secondary.500'}
             borderRight="1px"
             borderRightColor={'background.200'}
             w={{ base: 'full', md: 60 }}
@@ -58,7 +58,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                 <Avatar showBorder="true" borderColor='papayawhip' boxShadow={'dark-lg'} marginTop={'50'} size='xl' name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />{' '}
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
-            <Box marginTop={'10'}>
+            <Box marginTop={'10'} color={'white'} >
                 {LinkItems.map((link) => (
                     <NavItem key={link.name} icon={link.icon}>
                         {link.name}
@@ -111,9 +111,8 @@ const MobileNav = ({ onOpen, ...rest }) => {
             px={{ base: 4, md: 24 }}
             height="20"
             alignItems="center"
-            bg={'background.900'}
+            bg={'secondary.500'}
             borderBottomWidth="1px"
-            borderBottomColor={'Background.200'}
             justifyContent="flex-start"
             {...rest}>
             <IconButton

@@ -11,13 +11,10 @@ export default {
         },
         secondary: {
 
-            500: '#FCBF49',
+            500: '#BD5D38',
 
         },
-        background: {
-            900: '#f7f9fc',
-            200: '#e6eaf0',
-        }
+
     },
     sizes: {
         ...theme.space,
